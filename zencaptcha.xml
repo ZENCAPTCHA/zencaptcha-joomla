@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="plugin" group="captcha" method="upgrade">
+    <name>Captcha - ZENCAPTCHA</name>
+    <version>1.0.0</version>
+    <creationDate>2023-11-07</creationDate>
+    <author>ZENCAPTCHA</author>
+    <authorEmail>mail@zencaptcha.com</authorEmail>
+    <authorUrl>https://www.zencaptcha.com</authorUrl>
+    <copyright>Zencaptcha.com</copyright>
+    <license>GPL 2.0 or later</license>
+    <description>PLG_CAPTCHA_ZENCAPTCHA_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="zencaptcha">zencaptcha.php</filename>
+        <folder>language</folder>
+    </files>
+    <languages>
+		<language tag="en-GB">language/en-GB/plg_captcha_zencaptcha.ini</language>
+		<language tag="en-GB">language/en-GB/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="en-US">language/en-GB/plg_captcha_zencaptcha.ini</language>
+		<language tag="en-US">language/en-GB/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="da-DK">language/da-DK/plg_captcha_zencaptcha.ini</language>
+        <language tag="da-DK">language/da-DK/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="de-DE">language/de-DE/plg_captcha_zencaptcha.ini</language>
+        <language tag="de-DE">language/de-DE/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="de-AT">language/de-DE/plg_captcha_zencaptcha.ini</language>
+        <language tag="de-AT">language/de-DE/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="de-LI">language/de-DE/plg_captcha_zencaptcha.ini</language>
+        <language tag="de-LI">language/de-DE/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="de-LU">language/de-DE/plg_captcha_zencaptcha.ini</language>
+        <language tag="de-LU">language/de-DE/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="de-CH">language/de-DE/plg_captcha_zencaptcha.ini</language>
+        <language tag="de-CH">language/de-DE/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="es-ES">language/es-ES/plg_captcha_zencaptcha.ini</language>
+        <language tag="es-ES">language/es-ES/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="fr-FR">language/fr-FR/plg_captcha_zencaptcha.ini</language>
+        <language tag="fr-FR">language/fr-FR/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="it-IT">language/it-IT/plg_captcha_zencaptcha.ini</language>
+        <language tag="it-IT">language/it-IT/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="nl-NL">language/nl-NL/plg_captcha_zencaptcha.ini</language>
+        <language tag="nl-NL">language/nl-NL/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="pl-PL">language/pl-PL/plg_captcha_zencaptcha.ini</language>
+        <language tag="pl-PL">language/pl-PL/plg_captcha_zencaptcha.sys.ini</language>
+
+        <language tag="tr-TR">language/tr-TR/plg_captcha_zencaptcha.ini</language>
+        <language tag="tr-TR">language/tr-TR/plg_captcha_zencaptcha.sys.ini</language>
+
+	</languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+                <field
+                        name="site_key"
+                        type="text"
+                        label="PLG_CAPTCHA_ZENCAPTCHA_SITE_KEY"
+                        description="PLG_CAPTCHA_ZENCAPTCHA_SITE_KEY_DESC"
+                        default=""
+                        required="true"
+                        filter="string"
+                        size="100"
+                        class="input-xxlarge"
+                />
+
+                <field
+                        name="secret_key"
+                        type="text"
+                        label="PLG_CAPTCHA_ZENCAPTCHA_SECRET_KEY"
+                        description="PLG_CAPTCHA_ZENCAPTCHA_SECRET_KEY_DESC"
+                        default=""
+                        required="true"
+                        filter="string"
+                        size="100"
+                        class="input-xxlarge"
+                />
+
+                <field
+                        name="verify_emails"
+                        type="list"
+                        label="PLG_CAPTCHA_ZENCAPTCHA_VERIFY_EMAILS"
+                        default="no"
+                        validate="options"
+                >
+                    <option value="no">PLG_CAPTCHA_ZENCAPTCHA_NO</option>
+                    <option value="yes">PLG_CAPTCHA_ZENCAPTCHA_YES</option>
+                </field>
+
+
+                <field
+                        name="verification_method"
+                        type="list"
+                        label="PLG_CAPTCHA_ZENCAPTCHA_VERIFICATION_METHOD"
+                        default="none"
+                        validate="options"
+                >
+                    <option value="focus">PLG_CAPTCHA_ZENCAPTCHA_AUTO_FIELD</option>
+                    <option value="none">PLG_CAPTCHA_ZENCAPTCHA_CLICK_FIELD</option>
+                </field>
+
+            </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Zencaptcha Joomla Update Site">https://raw.githubusercontent.com/ZENCAPTCHA/zencaptcha-joomla/main/manifest.xml</server>
+    </updateservers>
+
+</extension>
