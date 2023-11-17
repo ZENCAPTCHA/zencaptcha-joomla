@@ -12,7 +12,7 @@ Protects forms from abuse by bots and unfair users. Reduces spam, blocks fake an
 * Grab the generated `Site Key` and `Secret Key`
 * Add these keys into the Zencaptcha plugin settings page in your Joomla! admin dashboard.
 * DONE! 🚀
-* 
+  
 ## Features ✨
 
 🛡️ Protects all HTML forms.<br>
